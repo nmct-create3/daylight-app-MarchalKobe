@@ -10,7 +10,7 @@ function _parseMillisecondsIntoReadableTime(timestamp) {
 	// const seconds = '0' + date.getSeconds();
 
 	// Will display time in 10:30(:23) format
-	return hours.substr(-2) + ':' + minutes.substr(-2); //  + ':' + s
+	return hours.substr(-2) + ':' + minutes.substr(-2); // + ':' + s
 }
 
 // 5 TODO: maak updateSun functie
@@ -41,6 +41,7 @@ let showResult = queryResponse => {
 // 2 Aan de hand van een longitude en latitude gaan we de yahoo wheater API ophalen.
 let getAPI = (lat, lon) => {
 	// Eerst bouwen we onze url op
+	url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=8e9e0976b8da3f1eec951cbe6bab417e&units=metric&lang=nl&cnt=1`;
 	// Met de fetch API proberen we de data op te halen.
 	// Als dat gelukt is, gaan we naar onze showResult functie.
 };
